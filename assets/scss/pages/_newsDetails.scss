@@ -1,0 +1,94 @@
+.header-bck {
+  background-color: #0c0d26;
+  height: 110px;
+}
+
+.content {
+  padding-bottom: 90px;
+  background: #f6f8fe;
+  &__wrapper {
+    @include containerStyle(820px);
+    &__header {
+      padding: 20px 0 50px;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+    }
+    &__main {
+      &__image-wrapper {
+        padding-bottom: 60px;
+        &__img {
+          display: block;
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+      &__text {
+        padding-bottom: 40px;
+        font-size: 18px;
+        line-height: 1.56;
+        color: #222;
+      }
+    }
+  }
+}
+
+@include underTabletOnly() {
+  .content {
+    &__wrapper {
+      &__header {
+        padding-bottom: 40px;
+        font-size: 27px;
+      }
+      &__main {
+        &__image-wrapper {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include underMobileOnly() {
+  .content {
+    padding-bottom: 40px;
+    &__wrapper {
+      &__header {
+        padding-bottom: 40px;
+        font-size: 24px;
+      }
+      &__main {
+        &__image-wrapper {
+          padding-bottom: 30px;
+        }
+        &__text {
+          padding-bottom: 25px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include underSmallOnly() {
+  .content {
+    padding-bottom: 40px;
+    &__wrapper {
+      &__header {
+        padding-bottom: 40px;
+        font-size: 21px;
+      }
+      &__main {
+        &__image-wrapper {
+          padding-bottom: 30px;
+        }
+        &__text {
+          padding-bottom: 25px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

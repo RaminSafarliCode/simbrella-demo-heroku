@@ -1,0 +1,393 @@
+.vacancy-info {
+  padding: 60px 0 90px;
+  background-color: #f6f8fe;
+  &__wrapper {
+    @include containerStyle();
+    &__skills {
+      padding-bottom: 30px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid #e7e7e7;
+      &:not(:first-child) {
+        border: none;
+      }
+      &__header {
+        padding: 0 0 18px;
+        font-size: 32px;
+        line-height: 1.33;
+        font-weight: bold;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+      &__list-wrapper {
+        &__list {
+          list-style-type: none;
+          &__list-item {
+            margin-bottom: 24px;
+            padding-left: 21px;
+            font-size: 18px;
+            line-height: 1.56;
+            color: #222;
+            position: relative;
+            &::before {
+              content: "";
+              display: block;
+              width: 8px;
+              height: 8px;
+              background: #ff931e;
+              position: absolute;
+              left: 0;
+              top: 8px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.vacancy-form {
+  padding: 120px 0;
+  background: #2d3192;
+  &__wrapper {
+    @include containerStyle();
+    &__header {
+      padding-bottom: 80px;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+    &__form {
+      &__content {
+        @include flexbox(center, space-between);
+        padding-bottom: 80px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        &__left {
+          @include flexbox(center, space-between);
+          width: calc(55% - 15px);
+          &__input-wrapper {
+            width: calc(33.333% - 15px);
+            &__input {
+              background: none;
+              width: 100%;
+              height: 64px;
+              padding: 0 20px;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              font-size: 16px;
+              font-weight: 600;
+              font-family: inherit;
+              color: #fff;
+              border-radius: 12px;
+              &:focus {
+                border-color: rgba(255, 255, 255, 0.9);
+                background: rgba(0, 0, 0, 0.05);
+                outline: none;
+              }
+            }
+          }
+        }
+        &__right {
+          @include flexbox(center, space-between);
+          width: calc(45% - 15px);
+          &__file-wrapper {
+            width: calc(50% - 15px);
+            &__label {
+              border: 1px dashed rgba(255, 255, 255, 0.5);
+              border-radius: 12px;
+              cursor: pointer;
+              height: 64px;
+              width: 100%;
+              @include flexbox(center, center);
+              &__input {
+                display: none;
+              }
+              &__description {
+                background: url(https://www.simbrella.com/site/templates/img/file_white_icon.svg)
+                  no-repeat 0 50%;
+                display: inline-block;
+                padding: 0 10px 0 27px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 2;
+                color: #fff;
+                white-space: nowrap;
+                max-width: 70%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+          }
+          &__button-wrapper {
+            width: calc(50% - 15px);
+            &__button {
+              display: block;
+              background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+                no-repeat calc(100% - 24px) 50%;
+              width: 100%;
+              height: 64px;
+              padding: 0 80px 0 24px;
+              border: none;
+              border-radius: 12px;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 64px;
+              text-align: left;
+              letter-spacing: -0.04em;
+              color: #eee;
+              text-decoration: none;
+              box-shadow: inset 0 0 0 3px #dfe4eb;
+              position: relative;
+              overflow: hidden;
+              cursor: pointer;
+              transition: all 0.15s linear;
+              &:hover {
+                box-shadow: inset 0 0 0 3px #ff931e;
+                background-position: calc(100% - 20px) 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__benefits {
+      @include flexbox(center, space-between);
+      padding-top: 85px;
+      &__box {
+        width: calc(33.333% - 30px);
+        &__image-wrapper {
+          height: 96px;
+        }
+        &__header {
+          text-transform: capitalize;
+          padding-bottom: 16px;
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include beforeTablet() {
+  .vacancy-form {
+    padding: 60px 0;
+    &__wrapper {
+      &__header {
+        padding-bottom: 40px;
+      }
+      &__form {
+        &__content {
+          padding-bottom: 60px;
+          &__left {
+            width: calc(55% - 10px);
+            &__input-wrapper {
+              width: calc(33.333% - 10px);
+            }
+          }
+          &__right {
+            width: calc(45% - 10px);
+            &__file-wrapper {
+              width: calc(50% - 10px);
+            }
+            &__button-wrapper {
+              width: calc(50% - 5px);
+            }
+          }
+        }
+      }
+      &__benefits {
+        padding-top: 60px;
+      }
+    }
+  }
+}
+
+@include underTabletOnly() {
+  .vacancy-info {
+    padding: 60px 0 20px;
+    &__wrapper {
+      &__skills {
+        &__header {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+  .vacancy-form {
+    padding: 40px 0;
+    &__wrapper {
+      &__header {
+        font-size: 27px;
+        padding-bottom: 20px;
+      }
+      &__form {
+        &__content {
+          padding-bottom: 40px;
+          display: block;
+          &__left {
+            padding-bottom: 20px;
+            width: 100%;
+            &__input-wrapper {
+              width: calc(33.333% - 10px);
+            }
+          }
+          &__right {
+            width: 100%;
+            &__file-wrapper {
+              width: calc(50% - 10px);
+            }
+            &__button-wrapper {
+              width: calc(50% - 5px);
+            }
+          }
+        }
+      }
+      &__benefits {
+        padding-top: 60px;
+        &__box {
+          &__header {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include underMobileOnly() {
+  .vacancy-info {
+    padding: 30px 0 20px;
+    &__wrapper {
+      &__skills {
+        &__header {
+          font-size: 24px;
+        }
+        &__list-wrapper {
+          &__list {
+            &__list-item {
+              margin-bottom: 18px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .vacancy-form {
+    padding: 40px 0;
+    &__wrapper {
+      &__header {
+        padding-bottom: 20px;
+        font-size: 24px;
+      }
+      &__form {
+        &__content {
+          display: block;
+          padding-bottom: 40px;
+          &__left {
+            display: block;
+            padding-bottom: 20px;
+            width: 100%;
+            &__input-wrapper {
+              padding-bottom: 20px;
+              width: 100%;
+            }
+          }
+          &__right {
+            width: 100%;
+            &__file-wrapper {
+              width: calc(50% - 10px);
+            }
+            &__button-wrapper {
+              width: calc(50% - 5px);
+            }
+          }
+        }
+      }
+      &__benefits {
+        padding-top: 40px;
+        &__box {
+          width: calc(33.333% - 15px);
+          padding-bottom: 20px;
+          text-align: center;
+          &__header {
+            padding-bottom: 8px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include underSmallOnly() {
+  .vacancy-info {
+    padding: 30px 0 20px;
+    &__wrapper {
+      &__skills {
+        &__header {
+          font-size: 21px;
+        }
+        &__list-wrapper {
+          &__list {
+            &__list-item {
+              margin-bottom: 18px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .vacancy-form {
+    padding: 40px 0;
+    &__wrapper {
+      &__header {
+        padding-bottom: 20px;
+        font-size: 21px;
+      }
+      &__form {
+        &__content {
+          display: block;
+          padding-bottom: 40px;
+          &__left {
+            display: block;
+            padding-bottom: 20px;
+            width: 100%;
+            &__input-wrapper {
+              padding-bottom: 20px;
+              width: 100%;
+            }
+          }
+          &__right {
+            display: block;
+            width: 100%;
+            &__file-wrapper {
+              width: 100%;
+              margin: 0 0 20px;
+            }
+            &__button-wrapper {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &__benefits {
+        padding-top: 40px;
+        &__box {
+          width: calc(33.333% - 15px);
+          padding-bottom: 20px;
+          text-align: center;
+          &__header {
+            padding-bottom: 8px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

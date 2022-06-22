@@ -1,0 +1,1732 @@
+// FIRST COMPANY SECTION
+.first-company-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  &__color {
+    position: absolute;
+    background-color: black;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  &__image {
+    position: absolute;
+    background-image: url(https://www.simbrella.com/site/assets/files/1040/cover.jpg);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    z-index: -2;
+  }
+  &__text {
+    position: relative;
+    top: 29%;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    @include containerStyle();
+    &__wrapper {
+      max-width: 610px;
+      &__h1 {
+        font-size: 48px;
+        padding-bottom: 16px;
+        line-height: 1.29;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+        // transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+        // visibility: hidden;
+        // opacity: 0;
+        // transform: translateY(80px);
+      }
+      &__p-wrap {
+        max-width: 640px;
+        padding-bottom: 48px;
+        line-height: 1.87;
+        font-size: 15px;
+      }
+    }
+  }
+  &__scroll-btn-wrapper {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    &__scroll-btn {
+      @include containerStyle;
+
+      &__link {
+        text-decoration: none;
+        font-family: inherit;
+        color: white;
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 100px;
+        position: relative;
+        &__span {
+          padding-left: 34px;
+        }
+      }
+      &__link::before {
+        content: "";
+        background-image: url(https://www.simbrella.com/site/templates/img/mouse_icon.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        width: 22px;
+        height: 43px;
+        display: block;
+        position: absolute;
+        top: -100%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// WHAT WE DO SECTION
+.what-we-do-section {
+  padding: 35px 0 40px;
+  &__wrapper {
+    @include containerStyle();
+    &__top {
+      padding-bottom: 30px;
+      @include flexbox(center, space-between);
+      &__header {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        color: #2d3192;
+      }
+      &__btn {
+        &__link {
+          display: inline-block;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 56px;
+          color: #222;
+          text-decoration: none;
+          height: 56px;
+          padding: 0 100px 0 24px;
+          border: 3px solid #dfe4eb;
+          border-radius: 12px;
+          background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+            no-repeat calc(100% - 24px) 50%;
+          transition: border-color 0.15s linear;
+          transition: background-position 0.15s linear;
+        }
+        &__link:hover {
+          border-color: #ff931e;
+          background-position: calc(100% - 20px) 50%;
+        }
+      }
+    }
+    &__content {
+      text-align: center;
+      @include flexbox(stretch, space-between);
+
+      &__box {
+        border-radius: 4px;
+        border: 2px solid #dfe4eb;
+        padding: 40px 20px;
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        width: calc(33.333% - 20px);
+        &__h3 {
+          padding-bottom: 16px;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 1.25;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #222;
+        }
+        &__p {
+          font-size: 16px;
+          line-height: 1.62;
+          text-align: center;
+          color: #5f6773;
+        }
+        &__link {
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+      .what-we-do-section__wrapper__content__box:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+//OUR PRODUCTS SECTION
+.products {
+  padding: 60px 0;
+  background-color: #2d3192;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(https://www.simbrella.com/site/templates/img/products_bg.svg);
+  background-size: cover;
+  &__wrapper {
+    @include containerStyle();
+    &__text {
+      padding-bottom: 60px;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+    &__rounds {
+      width: 618px;
+      height: 624px;
+      margin: 0 auto;
+      position: relative;
+      &__item {
+        transition: 0.3s;
+        &--1 {
+          width: 210px;
+          height: 150px;
+          position: absolute;
+          left: calc(50% - 105px);
+          top: 0px;
+        }
+        &--2 {
+          width: 202px;
+          height: 202px;
+          position: absolute;
+          left: 386px;
+          top: 31px;
+        }
+        &--3 {
+          width: 150px;
+          height: 210px;
+          position: absolute;
+          left: 468px;
+          top: 208px;
+        }
+        &--4 {
+          width: 202px;
+          height: 202px;
+          position: absolute;
+          left: 386px;
+          top: 390px;
+        }
+        &--5 {
+          width: 210px;
+          height: 150px;
+          position: absolute;
+          left: 204px;
+          top: 474px;
+        }
+        &--6 {
+          width: 202px;
+          height: 202px;
+          position: absolute;
+          left: 28px;
+          top: 390px;
+        }
+        &--7 {
+          width: 150px;
+          height: 210px;
+          position: absolute;
+          left: 0;
+          top: 208px;
+        }
+        &--8 {
+          width: 202px;
+          height: 202px;
+          position: absolute;
+          left: 29px;
+          top: 31px;
+        }
+        &__svg {
+          position: absolute;
+          width: 0;
+          height: 0;
+        }
+        &__link {
+          &--1 {
+            clip-path: url(#clip_1);
+          }
+          &--2 {
+            clip-path: url(#clip_2);
+            &__text {
+              margin: 15px 15px 0 0;
+            }
+          }
+          &--3 {
+            clip-path: url(#clip_3);
+          }
+          &--4 {
+            clip-path: url(#clip_4);
+            &__text {
+              margin: 0 15px 15px 0px;
+            }
+          }
+          &--5 {
+            clip-path: url(#clip_5);
+          }
+          &--6 {
+            clip-path: url(#clip_6);
+            &__text {
+              margin: 0 0 15px 15px;
+            }
+          }
+          &--7 {
+            clip-path: url(#clip_7);
+          }
+          &--8 {
+            clip-path: url(#clip_8);
+            &__text {
+              margin: 15px 0 0 15px;
+            }
+          }
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-content: stretch;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 1;
+          text-align: center;
+          color: #fff;
+          text-decoration: none;
+          background-color: #3595ee;
+          object-fit: cover;
+          &__text {
+            display: inline-block;
+            padding: 0 15px;
+          }
+          &:hover {
+            color: #3595ee;
+            background-color: #fff;
+            transform: scale(1.05);
+          }
+        }
+      }
+      &__info {
+        &__text {
+          opacity: 0;
+          visibility: hidden;
+          width: 270px;
+          height: auto;
+          font-size: 13px;
+          line-height: 1.54;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #fff;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, calc(10px - 50%));
+          transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+      }
+    }
+  }
+}
+
+.opacity-class {
+  opacity: 0.5 !important;
+}
+
+//FINANCIAL SOLUTIONS SECTION
+.financial-solutions-section {
+  padding: 35px 0 60px;
+  background-image: url(https://www.simbrella.com/site/assets/files/1049/solutions_bg-1.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(45, 49, 146, 0.6);
+    z-index: 0;
+  }
+  &__content-wrapper {
+    @include flexbox(center, center);
+    padding: 0 20px;
+    &__h2 {
+      width: 50%;
+      padding: 0 40px;
+      font-weight: bold;
+      font-size: 54px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+      text-shadow: 2px 2px 6px black;
+      &__span {
+        display: block;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
+    &__content {
+      width: 50%;
+      padding: 40px 60px;
+      z-index: 1;
+      &__list {
+        max-width: 520px;
+        margin: 0 auto;
+        list-style-type: none;
+        &__list-item {
+          padding: 32px 0;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 1.12;
+          color: #fff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+      }
+    }
+  }
+}
+
+//ENHANCE SECTION
+.enhance-section {
+  padding-top: 60px;
+  &__wrapper {
+    max-width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+    &__h2 {
+      padding-bottom: 40px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+    }
+    &__content {
+      padding: 90px 0;
+      &__box {
+        &__header {
+          padding: 0 0 8px;
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          color: #ff931e;
+        }
+        &__p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.86;
+          text-transform: uppercase;
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+//MAP SECTION
+.map {
+  padding-bottom: 60px;
+  position: relative;
+  &__wrapper {
+    @include containerStyle(1280px);
+    position: relative;
+    overflow: hidden;
+    &__svg-wrapper {
+      padding: 0px 0 0;
+      margin: -120px 0 0;
+      user-select: none;
+      position: relative;
+      &__svg {
+        user-select: none;
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform-origin: 0px 0px;
+        max-width: none !important;
+        max-height: none !important;
+        cursor: pointer;
+      }
+      &__flying-country {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 35px;
+        padding: 0 10px;
+        background: #fff;
+        border-radius: 8px 8px 8px 0;
+        position: absolute;
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 10px 0 0;
+          border-color: #fff transparent transparent transparent;
+          position: absolute;
+          left: 0;
+          top: 100%;
+        }
+        &__img {
+          width: 24px;
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+        &__text {
+          display: inline-block;
+          padding: 0 0 0 6px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 0.01em;
+          text-transform: capitalize;
+          color: #222;
+        }
+      }
+    }
+    &__text {
+      width: 100%;
+      height: 0;
+      padding: 0px 20px 0px;
+      position: absolute;
+      left: 0px;
+      top: 80px;
+      &__header {
+        height: 0;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.29;
+        letter-spacing: 0.01em;
+        color: #2d3192;
+      }
+    }
+    &__info {
+      position: absolute;
+      left: 0;
+      bottom: 85px;
+      width: 226px;
+      height: 160px;
+      display: block;
+      padding: 27px;
+      border: 1px solid #d3d8e7;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-transform: capitalize;
+      color: #222;
+      &__orange {
+        margin-bottom: 16px;
+        padding-left: 30px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: calc(50% - 10px);
+          opacity: 0.3;
+          background: #ff931e;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          position: absolute;
+          left: 7px;
+          top: calc(50% - 3px);
+          background: #ff931e;
+        }
+      }
+      &__blue {
+        @extend .map__wrapper__info__orange;
+        &::before {
+          background: #2d3192;
+        }
+        &::after {
+          background: #2d3192;
+        }
+      }
+      &__both {
+        @extend .map__wrapper__info__orange;
+        margin: 0;
+        &::before {
+          background: url(https://www.simbrella.com/site/templates/img/both_icon.svg)
+            no-repeat 50%;
+          background-size: cover;
+          opacity: 1;
+        }
+        &::after {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.map-mobile {
+  position: relative;
+  display: none;
+  &__wrapper {
+    @include containerStyle(1280px);
+    position: relative;
+    &__header {
+      padding: 0 0 30px;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+      text-align: center;
+    }
+    &__map {
+      padding-bottom: 20px;
+      &__img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__sec-header {
+      padding: 0 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #2d3192;
+    }
+    &__countries {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px 20px;
+      grid-auto-rows: minmax(min-content, max-content);
+      padding-bottom: 40px;
+      &__box {
+        &__text {
+          font-size: 16px;
+          color: #333;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+//OUR CLIENTS SECTION
+.our-clients {
+  padding: 35px 0 60px;
+  background: #f6f8fe;
+  &__wrapper {
+    @include containerStyle();
+    &__header {
+      padding: 0 0 30px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+    }
+    &__boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-auto-rows: minmax(min-content, max-content);
+      grid-gap: 30px 30px;
+      &__figure {
+        height: 160px;
+        @include flexbox(center, center);
+        border: 2px solid #dfe4eb;
+        margin: 0;
+        &__img {
+          max-height: 90px;
+          max-width: calc(100% - 60px);
+        }
+        & span {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 1.8;
+          text-align: center;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+  }
+}
+
+//EXECUTIVE TEAM SECTION
+.executive-team {
+  padding: 35px 0 60px;
+  transition: all 0.3s linear;
+  &__wrapper {
+    @include containerStyle();
+    &__header {
+      padding: 0 0 30px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+    }
+    &__grid {
+      text-align: center;
+      width: calc(100% + 30px);
+      margin: 0 0 0 -15px;
+      & hr {
+        border: none;
+      }
+      &__figure {
+        width: calc(20% - 34px);
+        margin: 0 15px 48px;
+        display: inline-block;
+        vertical-align: top;
+        &__img-wrapper {
+          background-image: url(https://www.simbrella.com/site/templates/img/figure_green_bg.png);
+          background-repeat: no-repeat;
+          background-position: 0px 50%;
+          background-size: cover;
+          border-radius: 4px;
+          &__img {
+            width: 100%;
+            display: block;
+          }
+        }
+        &__img-caption {
+          padding-top: 16px;
+          &__header {
+            padding: 0 0 4px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.33;
+            letter-spacing: -0.02em;
+            color: #222;
+          }
+          &__p {
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: -0.02em;
+            color: #5f6773;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    display: none;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #2d3192;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #2d3192;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.show-team {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+//WORK WITH US SECTION
+.work-with-us {
+  background-color: #f6f8fe;
+  padding: 35px 0 60px;
+  &__wrapper {
+    @include containerStyle();
+    &__header {
+      padding: 0 0 30px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+    }
+    &__benefits {
+      @include flexbox(center, space-between);
+      padding-bottom: 30px;
+      &__article {
+        width: calc(33.333% - 10px);
+        &__icon {
+          padding-bottom: 10px;
+        }
+        &__header {
+          padding: 0 0 0;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          color: #222;
+          text-transform: capitalize;
+        }
+      }
+    }
+    &__vacancies {
+      display: flex;
+      align-items: center;
+      &__image-wrapper {
+        width: 50%;
+        &__img {
+          display: block;
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+      &__text-wrapper {
+        width: 55%;
+        margin-left: -6%;
+        padding: 40px 60px;
+        color: #fff;
+        background-color: #2d3192;
+        border-radius: 4px;
+        &__header {
+          padding: 0 0 32px;
+          font-weight: bold;
+          font-size: 30px;
+          line-height: 1.4;
+          letter-spacing: 0.01em;
+        }
+        &__p {
+          padding: 0 0 40px;
+          font-size: 16px;
+          line-height: 1.56;
+        }
+        // &__link {
+        //   &:hover &__img {
+        //     transform: translateX(20px);
+        //   }
+        // }
+        &__btn {
+          &__link {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 56px;
+            color: #fff;
+            text-decoration: none;
+            height: 56px;
+            padding: 0 100px 0 24px;
+            border: 3px solid #fff;
+            border-radius: 12px;
+            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+              no-repeat calc(100% - 24px) 50%;
+            transition: border-color 0.15s linear;
+            transition: background-position 0.15s linear;
+          }
+          &__link:hover {
+            border-color: #ff931e;
+            background-position: calc(100% - 20px) 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//LATEST NEWS SECTION
+.news {
+  padding: 35px 0 80px;
+  min-height: calc(100vh - 80px);
+  &__wrapper {
+    @include containerStyle();
+    &__header {
+      @include flexbox(center, space-between);
+      padding-bottom: 40px;
+      &__h {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        color: #2d3192;
+      }
+      &__btn {
+        &__link {
+          display: inline-block;
+          height: 56px;
+          padding: 0 100px 0 24px;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 56px;
+          color: #222;
+          text-decoration: none;
+          border: 3px solid #dfe4eb;
+          background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+            no-repeat calc(100% - 24px) 50%;
+          border-radius: 12px;
+          transition: border-color 0.15s linear;
+          transition: background-position 0.15s linear;
+        }
+        &__link:hover {
+          border-color: #ff931e;
+          background-position: calc(100% - 20px) 50%;
+        }
+      }
+    }
+    &__content {
+      @include flexbox(stretch, flex-start);
+      &__article {
+        position: relative;
+        width: calc(33.333% - 20px);
+        margin-left: 30px;
+        &__image-wrapper {
+          margin-bottom: 24px;
+          border-radius: 6px;
+          overflow: hidden;
+          &__img {
+            display: block;
+            width: 100%;
+            transition: all 0.3s linear;
+          }
+        }
+        &__header {
+          padding-bottom: 48px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 1.75;
+          color: #222;
+        }
+        &__date {
+          font-size: 18px;
+          line-height: 1.33;
+          color: #5f6773;
+        }
+        &__link {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+        }
+
+        &:first-child {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+@include beforeTablet() {
+  .work-with-us {
+    padding: 35px 0 10px;
+  }
+  .our-clients {
+    &__wrapper {
+      &__boxes {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+  .news {
+    padding: 35px 0 40px;
+    &__wrapper {
+      &__header {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+@include underTabletOnly() {
+  .first-company-section {
+    height: 100vh;
+    &__image {
+      background-position: 60% 50%;
+    }
+    &__text {
+      &__wrapper {
+        max-width: 610px;
+        &__h1 {
+          font-size: 32px;
+        }
+      }
+    }
+    &__scroll-btn-wrapper {
+      display: none;
+    }
+  }
+  .what-we-do-section__wrapper {
+    &__top {
+      &__header {
+        font-size: 32px;
+      }
+    }
+    &__content {
+      &__box {
+        &__h3 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .financial-solutions-section {
+    padding: 35px 0 40px;
+    &__content-wrapper {
+      &__h2 {
+        font-size: 32px;
+      }
+      &__content {
+        &__list {
+          &__list-item {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .enhance-section {
+    padding-top: 35px;
+    &__wrapper {
+      &__h2 {
+        padding-bottom: 10px;
+        font-size: 32px;
+      }
+      &__content {
+        padding: 40px 0;
+        &__box {
+          &__header {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .map {
+    padding: 0;
+    display: none;
+    &__wrapper {
+      &__text {
+        top: 40px;
+        &__header {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  .map-mobile {
+    display: block;
+  }
+  .our-clients {
+    &__wrapper {
+      &__boxes {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px 20px;
+      }
+    }
+  }
+  .executive-team {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: calc(100vh - 0px);
+    padding: 25px 0 60px;
+    z-index: 500;
+    overflow-y: auto;
+
+    &__wrapper {
+      &__header {
+        padding: 0 0 20px;
+        font-size: 32px;
+      }
+      &__grid {
+        width: calc(100% + 20px);
+        height: calc(100vh - 60px);
+        padding: 0 20px;
+        margin: 0 0 0 -10px;
+        &__figure {
+          width: calc(25% - 24px);
+          margin: 0 10px 48px;
+        }
+        & hr {
+          display: none;
+        }
+      }
+    }
+    &__btn {
+      display: block;
+    }
+  }
+  .work-with-us {
+    padding: 35px 0 10px;
+    &__wrapper {
+      &__header {
+        font-size: 32px;
+      }
+      &__benefits {
+        &__article {
+          &__header {
+            font-size: 18px;
+          }
+        }
+      }
+      &__vacancies {
+        &__text-wrapper {
+          padding: 30px;
+          &__header {
+            padding-bottom: 24px;
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+  .news {
+    padding: 35px 0 40px;
+    &__wrapper {
+      &__header {
+        padding-bottom: 30px;
+        &__h {
+          font-size: 32px;
+        }
+      }
+      &__content {
+        &__article {
+          width: calc(33.333% - 12px);
+          &__image-wrapper {
+            margin-bottom: 15px;
+          }
+          &__header {
+            padding-bottom: 24px;
+            font-size: 16px;
+          }
+          &__date {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@include underMobileOnly() {
+  .first-company-section {
+    height: auto;
+    &__image {
+      background-position: 60% 50%;
+    }
+    &__text {
+      &__wrapper {
+        padding: 120px 0 90px;
+        &__h1 {
+          font-size: 27px;
+        }
+      }
+    }
+    &__scroll-btn-wrapper {
+      display: none;
+    }
+  }
+  .what-we-do-section__wrapper {
+    &__top {
+      &__header {
+        font-size: 27px;
+      }
+    }
+    &__content {
+      display: block;
+      &__box {
+        margin-bottom: 20px;
+        width: 100%;
+        &__h3 {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+  .products {
+    padding: 30px 0 20px;
+    &__wrapper {
+      &__text {
+        padding-bottom: 16px;
+        font-size: 27px;
+      }
+      &__rounds {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-gap: 20px 20px;
+        width: 100%;
+        height: auto;
+        &__item {
+          height: auto;
+          min-height: 90px;
+          width: auto;
+          position: static;
+          &__link {
+            width: 100%;
+            min-height: 90px;
+            padding: 16px 0;
+            clip-path: none !important;
+            &__text {
+              margin: 0 !important;
+            }
+          }
+        }
+        &__info {
+          &__text {
+            padding: 18px;
+            background-color: #fff;
+            color: #2d3192;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+  }
+  .financial-solutions-section {
+    height: auto;
+    padding: 0 0;
+    background-position: 50% 100%;
+    &::before {
+      height: 55%;
+      width: 100%;
+      top: 45%;
+    }
+    &__content-wrapper {
+      flex-direction: column;
+      padding: 0 0;
+      &__h2 {
+        padding: 120px 20px 120px;
+        width: 100%;
+        font-size: 27px;
+        line-height: 1.7;
+        text-align: center;
+      }
+      &__content {
+        width: 100%;
+        padding: 20px 20px;
+        &__list {
+          &__list-item {
+            padding: 20px 0;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.4;
+          }
+          li:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .enhance-section {
+    padding-top: 30px;
+    &__wrapper {
+      &__h2 {
+        padding-bottom: 10px;
+        font-size: 27px;
+      }
+      &__content {
+        padding: 0 0;
+        &__box {
+          width: 100%;
+          padding: 20px 0;
+          &__header {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .map {
+    padding: 30px 0;
+    display: none;
+    &__wrapper {
+      &__svg-wrapper {
+        padding: 60px 0 20px;
+      }
+      &__text {
+        top: 30px;
+        &__header {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+  .map-mobile {
+    display: block;
+    padding: 30px 0;
+    &__wrapper {
+      &__header {
+        font-size: 27px;
+      }
+    }
+  }
+  .our-clients {
+    &__wrapper {
+      &__boxes {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+      }
+    }
+  }
+  .executive-team {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: calc(100vh - 0px);
+    padding: 25px 0 60px;
+    z-index: 500;
+    overflow-y: auto;
+    &__wrapper {
+      &__header {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+      &__grid {
+        width: calc(100% + 20px);
+        height: calc(100vh - 60px);
+        padding: 0 20px;
+        margin: 0 0 0 -10px;
+        &__figure {
+          width: calc(50% - 24px);
+          margin: 0 10px 48px;
+        }
+        & hr {
+          display: none;
+        }
+      }
+    }
+    &__btn {
+      display: block;
+    }
+  }
+  .work-with-us {
+    padding: 35px 0 10px;
+    &__wrapper {
+      &__header {
+        padding: 0 0 20px;
+        font-size: 27px;
+      }
+      &__benefits {
+        padding-bottom: 10px;
+        &__article {
+          padding: 0 0 30px;
+          text-align: center;
+          &__header {
+            padding-bottom: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+      &__vacancies {
+        display: block;
+        &__image-wrapper {
+          width: 100%;
+          &__img {
+            border-radius: 4px 4px 0 0;
+          }
+        }
+        &__text-wrapper {
+          width: 100%;
+          padding: 20px 20px 25px;
+          margin: 0;
+          border-radius: 0 0 4px 4px;
+          &__header {
+            padding-bottom: 20px;
+            font-size: 27px;
+          }
+          &__p {
+            padding-bottom: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .news {
+    padding: 30px 0 40px;
+    &__wrapper {
+      &__header {
+        padding-bottom: 20px;
+        &__h {
+          font-size: 27px;
+        }
+      }
+      &__content {
+        display: block;
+        &__article {
+          width: 100%;
+          padding-bottom: 30px;
+          margin-left: 0;
+          &__image-wrapper {
+            margin-bottom: 15px;
+          }
+          &__header {
+            padding-bottom: 20px;
+            font-size: 18px;
+          }
+          &__date {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@include underSmallOnly() {
+  .first-company-section {
+    height: auto;
+
+    &__image {
+      background-position: 60% 50%;
+    }
+    &__text {
+      &__wrapper {
+        max-width: 58%;
+        padding-top: 35vw;
+        &__h1 {
+          font-size: 21px;
+        }
+        &__p-wrap {
+          padding-bottom: 30px;
+          line-height: 1.7;
+        }
+      }
+    }
+    &__scroll-btn-wrapper {
+      display: none;
+    }
+  }
+
+  .what-we-do-section__wrapper {
+    &__top {
+      @include flexbox(flex-start, center);
+      flex-direction: column;
+      &__header {
+        font-size: 24px;
+        padding-bottom: 10px;
+      }
+    }
+    &__content {
+      display: block;
+      &__box {
+        margin-bottom: 20px;
+        width: 100%;
+        &__h3 {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  .products {
+    padding: 30px 0 20px;
+    &__wrapper {
+      &__text {
+        padding: 0 0 16px;
+        font-size: 27px;
+      }
+      &__rounds {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-gap: 10px 10px;
+        width: 100%;
+        height: 390px;
+        &__item {
+          height: auto;
+          min-height: 90px;
+          width: auto;
+          position: static;
+          &__link {
+            width: 100%;
+            min-height: 90px;
+            padding: 16px 0;
+            clip-path: none !important;
+            &__text {
+              padding: 0 24px;
+              margin: 0 !important;
+            }
+          }
+        }
+        &__info {
+          &__text {
+            padding: 18px;
+            background-color: #fff;
+            color: #2d3192;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  .financial-solutions-section {
+    height: auto;
+    padding: 0 0;
+    background-position: 50% 100%;
+    &::before {
+      height: 55%;
+      width: 100%;
+      top: 45%;
+    }
+    &__content-wrapper {
+      flex-direction: column;
+      padding: 0 0;
+      &__h2 {
+        padding: 120px 20px 120px;
+        width: 100%;
+        font-size: 27px;
+        line-height: 1.7;
+        text-align: center;
+      }
+      &__content {
+        width: 100%;
+        padding: 20px 20px;
+        &__list {
+          &__list-item {
+            padding: 20px 0;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.4;
+          }
+          li:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .enhance-section {
+    padding-top: 30px;
+    &__wrapper {
+      &__h2 {
+        padding-bottom: 10px;
+        font-size: 24px;
+        text-align: center;
+      }
+      &__content {
+        padding: 0 0;
+        &__box {
+          width: 100%;
+          padding: 20px 0;
+          text-align: center;
+          &__header {
+            padding: 0 0 6px;
+            font-size: 27px;
+          }
+          &__p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .map {
+    padding: 30px 0;
+    display: none;
+    &__wrapper {
+      &__svg-wrapper {
+        padding: 80px 0 120px;
+      }
+      &__text {
+        &__header {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .map-mobile {
+    display: block;
+    padding: 30px 0;
+    &__wrapper {
+      &__header {
+        font-size: 24px;
+      }
+      &__countries {
+        grid-template-columns: 1fr 1fr;
+        &__box {
+          &__text {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .our-clients {
+    &__wrapper {
+      &__boxes {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+      }
+    }
+  }
+  .executive-team {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: calc(100vh - 0px);
+    padding: 25px 0 60px;
+    z-index: 500;
+    overflow-y: auto;
+    &__wrapper {
+      &__header {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+      &__grid {
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding: 0 20px;
+        margin: 0;
+        &__figure {
+          width: 100%;
+          margin: 0 0 48px;
+        }
+        & hr {
+          display: none;
+        }
+      }
+    }
+    &__btn {
+      display: block;
+    }
+  }
+  .work-with-us {
+    padding: 35px 0 10px;
+    &__wrapper {
+      &__header {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+      &__benefits {
+        padding-bottom: 10px;
+        &__article {
+          padding: 0 0 30px;
+          text-align: center;
+          &__header {
+            padding-bottom: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+      &__vacancies {
+        display: block;
+        &__image-wrapper {
+          width: 100%;
+          &__img {
+            border-radius: 4px 4px 0 0;
+          }
+        }
+        &__text-wrapper {
+          width: 100%;
+          padding: 20px;
+          margin: 0;
+          border-radius: 0 0 4px 4px;
+          &__header {
+            padding-bottom: 10px;
+            font-size: 21px;
+          }
+          &__p {
+            padding-bottom: 20px;
+            font-size: 14px;
+          }
+          &__btn {
+            &__link {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .news {
+    padding: 30px 0 10px;
+    &__wrapper {
+      &__header {
+        display: block;
+        padding-bottom: 20px;
+        &__h {
+          font-size: 24px;
+        }
+        &__btn {
+          &__link {
+            padding: 0 70px 0 24px;
+          }
+        }
+      }
+      &__content {
+        display: block;
+        &__article {
+          width: 100%;
+          padding-bottom: 30px;
+          margin-left: 0;
+          &__image-wrapper {
+            margin-bottom: 15px;
+          }
+          &__header {
+            padding-bottom: 10px;
+            font-size: 16px;
+          }
+          &__date {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

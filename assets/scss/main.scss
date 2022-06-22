@@ -1,0 +1,27 @@
+@import "./reset";
+
+// Variables
+@import "./variables";
+
+// Mixins
+@import "./mixins";
+
+// Components
+@import "./components/header";
+@import "./components/aside";
+@import "./components/footer";
+@import "./components/newsAndVacanciesDetailsHeader";
+@import "./components/otherFooters";
+
+// Bootstrap imports
+@import "../bootstrap/scss/bootstrap-grid.scss";
+
+// Pages
+@import "./pages/home";
+@import "./pages/whatWeDo";
+@import "./pages/vacancies";
+@import "./pages/vacancyDetails";
+@import "./pages/news";
+@import "./pages/newsDetails";
+@import "./pages/ourBranches";
+@import "./pages/investors";

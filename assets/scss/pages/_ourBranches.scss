@@ -1,0 +1,98 @@
+.branches {
+  padding: 100px 0;
+  background: #f6f8fe;
+  &__wrapper {
+    @include containerStyle();
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px 30px;
+      &__box {
+        min-height: 410px;
+        padding: 40px 40px;
+        border: 1px solid #e6e6e6;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 40px) calc(100% - 40px);
+        border-radius: 4px;
+        &__header {
+          padding-bottom: 32px;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 1.5;
+          letter-spacing: 0.01em;
+          color: #ff931e;
+        }
+        &__info-head {
+          padding-bottom: 8px;
+          font-size: 14px;
+          line-height: 1.71;
+          color: #99a3b2;
+        }
+        &__info {
+          min-height: 72px;
+          padding-bottom: 24px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 1.5;
+          color: #000;
+          &__mail {
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include underTabletOnly() {
+  .branches {
+    padding: 40px 0;
+    &__wrapper {
+      &__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px 20px;
+      }
+    }
+  }
+}
+
+@include underMobileOnly() {
+  .branches {
+    padding: 30px 0 40px;
+    &__wrapper {
+      &__grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        &__box {
+          min-height: 1px;
+          padding: 30px 30px 100px;
+          &__header {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include underSmallOnly() {
+  .branches {
+    padding: 20px 0 40px;
+    &__wrapper {
+      &__grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        &__box {
+          min-height: 1px;
+          padding: 20px 20px 100px;
+          &__header {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+}

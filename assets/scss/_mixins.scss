@@ -1,0 +1,35 @@
+@import "./variables";
+
+@mixin flexbox($alignItems: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin containerStyle($max-width: $max-width-container) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin beforeTablet() {
+  @media only secreen and (min-width: 1024px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin underTabletOnly() {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin underMobileOnly() {
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin underSmallOnly() {
+  @media only screen and (min-width: 240px) and (max-width: 479px) {
+    @content;
+  }
+}
